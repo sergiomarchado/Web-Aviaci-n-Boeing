@@ -1,0 +1,345 @@
+/* -----------------------------------CARGA DE LAS FUENTES DESCARGADAS--------------------------------- */
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('../fuentes/SpaceGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'SpaceGrotesk', sans-serif;
+    padding-top: 90px;
+}
+/* -----------------------------------HEADER MENÚ-------------------------------------------- */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #02081D;
+    color: #ffffff;
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
+    border-bottom: 2px solid white;
+}
+
+header h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.logo {
+    background: url('../imagenes/logoblanco.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0; /* Previene que el logo se reduzca */
+    width: 15%; /* O el tamaño que prefieras para el logo */
+    height: 150px; /* Ajusta a la altura del header */
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center; /* Distribuye el espacio entre los elementos */
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Esto permite que el menú crezca y ocupe el espacio disponible */
+    gap: 20px; /* Añade espacio entre los elementos del menú si es necesario */
+}
+
+.social-icons {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+nav a, .social-icons a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #02081D;
+}
+
+nav a img {
+    width: 30px; /* Tamaño fijo para los iconos de redes sociales */
+    height: auto;
+}
+
+/*-----------------------------------------IMAGEN DEL AVIÓN----------------------------------------------------*/
+
+.bg-image {
+    width: 100vw; /* Contenedor de la imagen = ancho de la ventana del navegador */
+    overflow: hidden; /* Esto oculta cualquier contenido que exceda el tamaño del contenedor */
+    position: relative; 
+}
+.bg-image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Esto elimina cualquier espacio adicional debajo de la imagen */
+}
+
+/* Media queries para responsividad */
+@media (min-width: 1200px) {
+    nav a {
+        font-size: 16px; /* Tamaño de fuente para pantallas grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 200px; /* Tamaño del logo más pequeño para pantallas más pequeñas */
+    }
+
+    nav a {
+        font-size: 12px; /* Tamaño de fuente más pequeño para pantallas más pequeñas */
+    }
+
+    nav a img {
+        width: 25px; /* Tamaño de iconos más pequeño para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px; /* Menos padding para pantallas muy pequeñas */
+        height: 60px; /* Altura más pequeña para el header */
+    }
+
+    .menu-items {
+        display: block;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+        justify-content: flex-end;
+    }
+}
+/*-----------------------------------------CONTENIDO PRINCIPAL----------------------------------------------------*/
+.content {
+    max-width: 2000px; /* Ancho. Se puede aumentar si se desea que el texto ocupe más espacio */
+    margin: 0 auto; /* Centra la sección en la página */
+    padding: 10px 10px; /* Aumenta el padding horizontal*/
+    font-family: 'SpaceGrotesk', sans-serif;
+}
+
+.content h2 {
+    color: #02081D;
+    margin-bottom: 10px; /* Espacio debajo del título */
+    font-size: 2rem; /* Tamaño grande para el título */
+}
+
+.content h3 {
+    color: #02081D;
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Tamaño más pequeño para el subtítulo */
+}
+
+.content p {
+    color: #333333;
+    line-height: 1.6; /* Espacio vertical entre líneas de texto */
+    margin-bottom: 20px; /* Espacio debajo del párrafo */
+}
+@media (max-width: 1200px) {
+    .content {
+        padding: 20px 30px; /* Menos padding para pantallas más pequeñas */
+    }
+    .content h2, .content h3 {
+        font-size: 1.75rem; /* Reduce el tamaño del texto para h2 y h3 en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 15px 20px; /* Aún menos padding para pantallas más pequeñas */
+    }
+    .content h2, .content h3 {
+        font-size: 1.5rem; /* Tamaño más pequeño para h2 y h3 en dispositivos móviles */
+    }
+    .content p {
+        font-size: 1rem; /* Reduce el tamaño de la fuente para el párrafo en dispositivos móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 10px 15px; /* Menos espacio alrededor para dispositivos muy pequeños */
+    }
+    .content h2, .content h3 {
+        font-size: 1.25rem; /* Tamaño más pequeño para h2 y h3 en dispositivos muy pequeños */
+    }
+    .content p {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño para párrafos en dispositivos muy pequeños */
+    }
+    
+}
+/*-----------------------------------------ARTÍCULOS----------------------------------------------------*/
+.article-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'SpaceGrotesk', sans-serif;
+}
+
+.article-section h2 {
+    text-align: center;
+    color: #02081D;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas para pantallas grandes */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-bottom: 40px;
+}
+
+
+.article-card {
+    background: #ffffff;
+    border-radius: 10px; /* Bordes redondeados para las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto elevado */
+    overflow: hidden; /* Asegura que todo dentro de .article-card respete los bordes redondeados */
+    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse sobre la tarjeta */
+}
+
+.article-card:hover {
+    transform: translateY(-5px); /* Levanta ligeramente la tarjeta al pasar el mouse */
+}
+
+.article-card img {
+    width: 100%;
+    height: auto; /* Asegura que la imagen cubra el ancho de la tarjeta */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio disponible sin distorsionarse */
+}
+
+.article-content {
+    padding: 15px;
+}
+
+.article-content h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #02081D;
+}
+
+.article-content p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+.article-date {
+    font-size: 0.2rem; /* Un tamaño más pequeño para la fecha */
+    color: #555; /* Un color más suave que el del cuerpo del texto */
+    margin-bottom: 5px; /* Espacio antes del resumen del artículo */
+}
+@media (max-width: 1500px) { /* Ajusta el número para cuando quieras cambiar a 3 columnas */
+    .article-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1100px) { /* Ajusta el número para cuando quieras cambiar a 2 columnas */
+    .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) { /* Ajusta el número para cuando quieras cambiar a 1 columna */
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*-----------------------------------------FOOTER----------------------------------------------------*/
+.site-footer {
+    background-color: #02081D;
+    color: white;
+    padding: 20px 0;
+    font-family: 'SpaceGrotesk', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 10%;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    font-size: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul {
+    padding-left: 0;
+}
+
+.footer-section li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section li a:hover {
+    color: #FFD700; /* Cambia al color que prefieras */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-section a img {
+    width: 24px; /* Ajusta según el tamaño deseado */
+    height: auto;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noticias sobre Boeing en MSFS">
+    <title> BoeingMSFS</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="icon" type="image/png" href="imagenes/favicon.png"/>
+</head>
+<!---------------------------------------------EMPIEZA EL BODY AQUI-------------------------------------->
+<body>
+    <!-----------------------HEADER Y MENÚ------------------------------>
+    <header>
+        <h1>BOEING MICROSOFT FLIGHT SIMULATOR</h1>
+        <nav>
+            <div class="logo"></div>
+            <div class="menu-items">
+                <a href="../index.html">INICIO</a>
+                <a href="contacto.html">CONTACTO</a>
+                <a href="../Aeronaves/aeronaves.html">AERONAVES</a>
+                <a href="../UltimasNoticias/ultimasnoticias.html">ÚLTIMAS NOTICIAS</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/yeyi_mr/"><img src="../imagenes/iconoinstagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="../imagenes/iconofacebook.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/watch?v=0NjFz0PPmNc"><img src="../imagenes/youtube.png" alt="YouTube"></a>
+            </div>
+        </nav>
+    </header>
+       <!-----------------------SECCIÓN DE CONTACTO------------------------------>
+       <section class="contact-section">
+        <h2>Contacto</h2>
+        <p>Las palabras amables nos hacen seguir adelante y las críticas nos hacen trabajar más duro. Cuéntanos cómo nos va, 
+            envíanos tus comentarios o cuéntanos alguna idea que tengas en mente.</p>
+        <p>Sea lo más descriptivo que pueda y háganos saber qué podemos hacer para ayudar.</p>
+        
+        <form action="/send-contact-form" method="POST">
+            <div class="form-group">
+                <label for="name">Su nombre</label>
+                <input type="text" id="name" name="name" placeholder="Háganos saber con quién estamos hablando.">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Tu correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Su dirección de correo electrónico.">
+            </div>
+            
+            <div class="form-group">
+                <label for="type">Tipo de Comentarios</label>
+                <select id="type" name="type">
+                    <option>Contacto General</option>
+                    <option>Soporte Técnico</option>
+                    <option>Sugerencias</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Cuéntanos más</label>
+                <textarea id="message" name="message" rows="6" placeholder="Sea descriptivo."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Enviar mensaje</button>
+            </div>
+        </form>
+        
+        <p class="privacy-policy">Al enviar el formulario anterior, usted acepta que BOEINGMSFS procese sus datos con el fin de responder a su consulta. Puedes leer más en nuestra política de privacidad.</p>
+    </section>
+
+</body>
+<!---------------------------------------------EMPIEZA EL FOOTER AQUI-------------------------------------->
+<footer class="site-footer">
+    <div class="footer-content">
+        <section class="footer-section">
+            <h4>Contacto</h4>
+            <p>info@boeingmsfs.com</p>
+            <!-- Puedes agregar aquí más información de contacto si es necesario -->
+        </section>
+        
+        <section class="footer-section">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="../Aeronaves/aeronaves.html">Aeronaves</a></li>
+                <li><a href="../UltimasNoticias/ultimasnoticias.html">Últimas Noticias</a></li>
+                <li><a href="tutoriales.html">Tutoriales</a></li>
+            </ul>
+        </section>
+        
+        <section class="footer-section">
+            <h4>Síguenos</h4>
+            <a href="https://www.instagram.com/yeyi_mr/"><img src="../imagenes/iconoinstagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="../imagenes/iconofacebook.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/watch?v=0NjFz0PPmNc"><img src="../imagenes/youtube.png" alt="YouTube"></a>
+        </section>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2024 BoeingMSFS. Todos los derechos reservados. Sergio Marchado Ropero DAM</p>
+    </div>
+</footer>
+
+
+</html>
